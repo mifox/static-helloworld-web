@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜数字游戏</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .game-container {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .game-title {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        
+        .input-group {
+            margin: 1.5rem 0;
+        }
+        
+        #guessInput {
+            padding: 0.5rem;
+            font-size: 1.2rem;
+            border: 2px solid #667eea;
+            border-radius: 5px;
+            width: 100px;
+            text-align: center;
+        }
+        
+        #guessButton {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 0.5rem;
+        }
+        
+        #guessButton:hover {
+            background: #5a67d8;
+        }
+        
+        #message {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+            min-height: 1.5em;
+        }
+        
+        .attempts {
+            font-size: 1rem;
+            color: #666;
+        }
+        
+        .hint {
+            color: #764ba2;
+            font-weight: bold;
+        }
+        
+        #restartButton {
+            background: #48bb78;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 1rem;
+            display: none;
+        }
+        
+        #restartButton:hover {
+            background: #38a169;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="game-title">猜数字游戏</h1>
+        <p>我想了一个1到100之间的数字，你能猜到它是什么吗？</p>
+        
+        <div class="input-group">
+            <input type="number" id="guessInput" min="1" max="100" placeholder="输入数字">
+            <button id="guessButton">猜!</button>
+        </div>
+        
+        <div id="message">请输入你的猜测</div>
+        <div class="attempts">尝试次数: <span id="attemptCount">0</span></div>
+        <div class="hint" id="hint"></div>
+        
+        <button id="restartButton">再玩一次</button>
+        
+        <p><a href="index.html">返回主页</a></p>
+    </div>
+    
+    <script src="guess-number.js"></script>
+</body>
+</html>
